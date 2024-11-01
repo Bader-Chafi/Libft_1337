@@ -1,2 +1,0 @@
-# Libft_1337
-Cursus_42_1337_BaderChafi
