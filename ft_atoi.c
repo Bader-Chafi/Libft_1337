@@ -5,10 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bchafi <bchafi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/26 10:55:30 by bchafi            #+#    #+#             */
-/*   Updated: 2024/10/31 22:18:29 by bchafi           ###   ########.fr       */
+/*   Created: 2024/11/02 02:10:01 by bchafi            #+#    #+#             */
+/*   Updated: 2024/11/02 02:10:02 by bchafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <limits.h>
 
 int ft_atoi(const char *str)
 {
@@ -16,11 +18,16 @@ int ft_atoi(const char *str)
     int sign;
     int number;
 
-    number  = 0;
-    sign    = 1;
     i = 0;
-    while (str[i] == '\n' || str[i] == '\f' || str[i] == '\t' || str[i] == ' ' || str[i] == '\v' || str[i] == '\r')
+    number = 0;
+    sign = 1;
+    
+    while (str[i] == '\n' || str[i] == '\f' || str[i] == '\t' ||
+           str[i] == ' ' || str[i] == '\v' || str[i] == '\r')
+    {
         i++;
+    }
+    
     if (str[i] == '-')
     {
         sign = -1;
@@ -28,22 +35,29 @@ int ft_atoi(const char *str)
     }
     else if (str[i] == '+')
     {
-        sign = 1;
         i++;
     }
+    
     while (str[i])
     {
         if (str[i] == '+' || str[i] == '-')
-            return (0);
+        {
+            return 0;
+        }
         else if (str[i] >= '0' && str[i] <= '9')
         {
-            number = (number * 10) + (str[i] - 48);
-            if (str[i+1] > '9' || str[i+1] < '0') 
+            number = (number * 10) + (str[i] - '0');
+            if (str[i + 1] < '0' || str[i + 1] > '9')
+            {
                 return (number * sign);
+            }
         }
         else
-            return (0);
+        {
+            return 0;
+        }
         i++;
     }
+    
     return (number * sign);
 }
