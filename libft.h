@@ -1,12 +1,6 @@
 #include <string.h>
 #ifndef LIBFT_H
 #define LIBFT_H
-typedef struct s_list
-{
-    void *content;
-    struct s_list *next;
-} t_list;
-
 int ft_isalpha(int c);
 int ft_isdigit(int c);
 int ft_isalnum(int c);
@@ -45,6 +39,11 @@ void ft_putendl_fd(char *s, int fd);
 void ft_putnbr_fd(int n, int fd);
 
 // Part of bonus
+typedef struct s_list
+{
+    void *content;
+    struct s_list *next;
+} t_list;
 
 
 t_list *ft_lstnew(void *content);

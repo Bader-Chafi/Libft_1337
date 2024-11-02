@@ -1,5 +1,6 @@
 # Name of the output library
 NAME = libft.a
+HEADER = libft.h
 
 # Core source files
 SOURCES = \
@@ -21,7 +22,7 @@ OBJECTS = $(SOURCES:.c=.o)
 OBJECTSB = $(SOURCESB:.c=.o)
 
 # Compiler and flags
-CC = gcc
+CC = cc
 AR = ar
 CFLAGS = -Wall -Wextra -Werror
 
@@ -31,6 +32,9 @@ all: $(NAME)
 # Rule to build the library with core and bonus objects
 $(NAME): $(OBJECTS)
 	$(AR) -rcs $@ $^
+
+%.o : %.c $(HEADER)
+	cc $(CFLAGS) -c $<
 
 # Rule for bonus target, adding bonus objects to the library
 bonus: $(NAME) $(OBJECTSB)
@@ -45,3 +49,4 @@ fclean: clean
 
 # Rebuild target
 re: fclean all
+.PHONY: all clean fclean re
