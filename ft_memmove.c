@@ -6,7 +6,7 @@
 /*   By: bchafi <bchafi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 00:04:04 by bchafi            #+#    #+#             */
-/*   Updated: 2024/11/03 02:01:16 by bchafi           ###   ########.fr       */
+/*   Updated: 2024/11/03 16:57:34 by bchafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,13 @@
 
 static char	*copy(char *dest, const char *src, size_t len)
 {
-	while (len > 0)
+	size_t	i;
+
+	i = len;
+	while (i > 0)
 	{
-		len--;
-		dest[len] = src[len];
+		i--;
+		dest[i] = src[i];
 	}
 	return (dest);
 }
@@ -30,9 +33,9 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 	dest = (char *)dst;
 	sourc = (const char *)src;
-	if (!dest || !sourc)
+	if (!dst && !sourc)
 		return (NULL);
-	if (dest > sourc && dest < sourc + len)
+	if (dest > sourc)
 		dest = copy(dest, sourc, len);
 	else
 	{

@@ -6,11 +6,9 @@
 /*   By: bchafi <bchafi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 23:09:54 by bchafi            #+#    #+#             */
-/*   Updated: 2024/11/02 23:49:34 by bchafi           ###   ########.fr       */
+/*   Updated: 2024/11/03 11:03:17 by bchafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <limits.h>
 
 int	ft_atoi(const char *str)
 {

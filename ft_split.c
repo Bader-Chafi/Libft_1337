@@ -6,7 +6,7 @@
 /*   By: bchafi <bchafi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 01:18:57 by bchafi            #+#    #+#             */
-/*   Updated: 2024/11/03 02:28:37 by bchafi           ###   ########.fr       */
+/*   Updated: 2024/11/03 10:20:14 by bchafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,23 +49,22 @@ char	**ft_split(char const *s, char c)
 	char	**he;
 
 	i = 0;
-	he = (char **)malloc((counter_words(s, c) + 1) * sizeof(char *));
+	he = (char **)malloc(((counter_words(s, c)) + 1) * sizeof(char *));
 	if (!he)
 		return (NULL);
 	index_word = 0;
-	while (s[i] && index_word < counter_words(s, c))
+	while (s[i] && index_word < (counter_words(s, c)))
 	{
 		while (s[i] == c)
 			i++;
 		len_word = 0;
 		while (s[i + len_word] != c && s[i + len_word] != '\0')
 			len_word++;
-		he[index_word] = (char *)malloc((len_word + 1));
+		he[index_word] = ft_substr(s, i, len_word);
 		if (!he[index_word])
 			return (free_str(index_word, he), NULL);
-		he[index_word] = ft_substr(s, i, len_word);
-		he[index_word][len_word] = '\0';
-		(1) && (index_word++, i += len_word);
+		(1) && (i += len_word, index_word++);
 	}
-	return (he[index_word] = NULL, he);
+	he[index_word] = NULL;
+	return (he);
 }

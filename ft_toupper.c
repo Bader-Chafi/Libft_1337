@@ -6,13 +6,13 @@
 /*   By: bchafi <bchafi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 02:50:45 by bchafi            #+#    #+#             */
-/*   Updated: 2024/11/03 02:50:47 by bchafi           ###   ########.fr       */
+/*   Updated: 2024/11/03 09:30:45 by bchafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
-    if (c >= 'a' && c <= 'z')
-        return (c - 32);
-    return (c);
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	return (c);
 }
