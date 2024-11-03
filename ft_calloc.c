@@ -1,23 +1,32 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bchafi <bchafi@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/02 23:51:50 by bchafi            #+#    #+#             */
+/*   Updated: 2024/11/03 02:53:21 by bchafi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
-void *ft_calloc(size_t count, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
-    unsigned char *tmp;
-    size_t i, total_alocate;
-    i = 0;
-    if (count == 0 || size == 0)
-        return (malloc(0));
-    total_alocate = count * size;  //total number of bytes we want to allocate.
-    if (count != 0 && (total_alocate / count) != size) // count * size تجاوزت الحد المسموح به وأدت إلى "تجاوز سعة" أو overflow في المتغير total_alocate
-        return (NULL);
-    tmp = malloc(total_alocate);
-    if (!tmp)
-        return (NULL);
-    ft_memset(tmp, 0, total_alocate);
-    return ((void*)tmp);
-}
+	unsigned char	*tmp;
+	size_t			i;
+	size_t			total_allocate;
 
-// count: The number of elements to allocate.
-// size: The size in bytes of each element.
+	i = 0;
+	if (count == 0 || size == 0)
+		return (malloc(0));
+	total_allocate = count * size;
+	if (count != 0 && (total_allocate / count) != size)
+		return (NULL);
+	tmp = malloc(total_allocate);
+	if (!tmp)
+		return (NULL);
+	ft_memset(tmp, 0, total_allocate);
+	return ((void *)tmp);
+}

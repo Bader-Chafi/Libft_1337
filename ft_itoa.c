@@ -1,6 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bchafi <bchafi@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/02 23:57:14 by bchafi            #+#    #+#             */
+/*   Updated: 2024/11/03 02:53:33 by bchafi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
+
 static int	counter_size(int n)
 {
 	int	i;
@@ -19,7 +30,7 @@ static int	counter_size(int n)
 	return (i);
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	long	i;
 	int		size;

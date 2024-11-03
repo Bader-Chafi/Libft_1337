@@ -1,13 +1,24 @@
-#include "libft.h" // assuming t_list is defined in libft.h
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bchafi <bchafi@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/03 00:00:58 by bchafi            #+#    #+#             */
+/*   Updated: 2024/11/03 00:01:20 by bchafi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void ft_lstiter(t_list *lst, void (*f)(void *))
+#include "libft.h"
+
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-    if (!lst || !f) // Check if lst or f is NULL
-        return;
-
-    while (lst) // Iterate through the list
-    {
-        f(lst->content); // Apply function f on the content of the current node
-        lst = lst->next; // Move to the next node
-    }
+	if (!lst || !f)
+		return ;
+	while (lst)
+	{
+		f(lst->content);
+		lst = lst->next;
+	}
 }

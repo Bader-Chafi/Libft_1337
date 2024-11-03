@@ -1,11 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bchafi <bchafi@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/03 00:01:25 by bchafi            #+#    #+#             */
+/*   Updated: 2024/11/03 00:01:40 by bchafi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-t_list *ft_lstlast(t_list *lst)
+
+t_list	*ft_lstlast(t_list *lst)
 {
-    if (lst)
-    {
-        while (lst->next)
-            lst = lst->next;
-        return (lst);
-    }
-    return (NULL);
+	if (lst)
+	{
+		while (lst->next)
+			lst = lst->next;
+		return (lst);
+	}
+	return (NULL);
 }
