@@ -22,14 +22,14 @@ CFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
-$(NAME): $(OBJECTS)
-	$(AR) -rcs $@ $^
-
 %.o : %.c $(HEADER)
 	cc $(CFLAGS) -c $<
 
+$(NAME): $(OBJECTS)
+	$(AR) -rc $@ $^
+
 bonus: $(NAME) $(OBJECTSB)
-	$(AR) -rcs $(NAME) $(OBJECTSB)
+	$(AR) -rc $(NAME) $(OBJECTSB) $(OBJECTSB)
 
 clean:
 	rm -f $(OBJECTS) $(OBJECTSB)
@@ -38,4 +38,4 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
-.PHONY: bonus all clean fclean re
+.PHONY: clean

@@ -6,7 +6,7 @@
 /*   By: bchafi <bchafi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 02:35:00 by bchafi            #+#    #+#             */
-/*   Updated: 2024/11/03 02:37:45 by bchafi           ###   ########.fr       */
+/*   Updated: 2024/11/06 16:30:04 by bchafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,21 +22,21 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	lens1 = ft_strlen(s1);
 	lens2 = ft_strlen(s2);
+	if (!s1 && s2)
+		return (ft_strdup(s2));
+	if (s1 && !s2)
+		return (ft_strdup(s1));
+	if (!s1 && !s2)
+		return (NULL);
 	con = (char *)malloc(lens1 + lens2 + 1);
 	if (!con)
 		return (NULL);
-	i = 0;
-	while (i < lens1)
-	{
+	i = -1;
+	while (++i < lens1)
 		con[i] = s1[i];
-		i++;
-	}
-	j = 0;
-	while (j < lens2)
-	{
+	j = -1;
+	while (++j < lens2)
 		con[i + j] = s2[j];
-		j++;
-	}
 	con[lens1 + lens2] = '\0';
 	return (con);
 }

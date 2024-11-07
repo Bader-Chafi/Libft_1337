@@ -6,7 +6,7 @@
 /*   By: bchafi <bchafi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 23:57:53 by bchafi            #+#    #+#             */
-/*   Updated: 2024/11/03 02:55:21 by bchafi           ###   ########.fr       */
+/*   Updated: 2024/11/06 18:25:38 by bchafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list	*lastlst;
+	t_list	*last;
 
-	if (!lst)
+	if (!new)
 		return ;
 	if (!*lst)
 		*lst = new;
 	else
 	{
-		lastlst = ft_lstlast(*lst);
-		lastlst->next = new;
+		last = ft_lstlast(*lst);
+		last->next = new;
 	}
 }

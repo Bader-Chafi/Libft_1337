@@ -6,7 +6,7 @@
 /*   By: bchafi <bchafi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 02:30:23 by bchafi            #+#    #+#             */
-/*   Updated: 2024/11/03 02:30:24 by bchafi           ###   ########.fr       */
+/*   Updated: 2024/11/07 09:32:48 by bchafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,10 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <string.h>
+# include <limits.h>
+// plus
+# include <stdio.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -52,7 +56,6 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
-// Part of bonus
 typedef struct s_list
 {
 	void			*content;

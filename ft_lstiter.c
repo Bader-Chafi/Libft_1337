@@ -6,7 +6,7 @@
 /*   By: bchafi <bchafi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 00:00:58 by bchafi            #+#    #+#             */
-/*   Updated: 2024/11/03 00:01:20 by bchafi           ###   ########.fr       */
+/*   Updated: 2024/11/06 18:21:05 by bchafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (!lst || !f)
+	if (!f || !lst)
 		return ;
 	while (lst)
 	{

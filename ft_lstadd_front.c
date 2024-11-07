@@ -6,7 +6,7 @@
 /*   By: bchafi <bchafi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 23:59:22 by bchafi            #+#    #+#             */
-/*   Updated: 2024/11/02 23:59:33 by bchafi           ###   ########.fr       */
+/*   Updated: 2024/11/06 18:22:06 by bchafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (!lst || !new)
+	if (!new)
 		return ;
 	new->next = *lst;
 	*lst = new;

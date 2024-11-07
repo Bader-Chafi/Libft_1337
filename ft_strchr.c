@@ -6,7 +6,7 @@
 /*   By: bchafi <bchafi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 02:33:39 by bchafi            #+#    #+#             */
-/*   Updated: 2024/11/03 02:33:40 by bchafi           ###   ########.fr       */
+/*   Updated: 2024/11/04 17:01:35 by bchafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,16 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	char	char_to_find;
+	char	char_find;
 
-	char_to_find = (char)c;
+	char_find = (char)c;
 	while (*s)
 	{
-		if (*s == char_to_find)
-		{
+		if (*s == char_find)
 			return ((char *)s);
-		}
 		s++;
 	}
-	if (char_to_find == '\0')
-	{
+	if (char_find == '\0')
 		return ((char *)s);
-	}
 	return (NULL);
 }

@@ -6,15 +6,15 @@
 /*   By: bchafi <bchafi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 23:55:37 by bchafi            #+#    #+#             */
-/*   Updated: 2024/11/02 23:55:38 by bchafi           ###   ########.fr       */
+/*   Updated: 2024/11/04 10:30:22 by bchafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
-	{
 		return (1);
-	}
 	return (0);
 }

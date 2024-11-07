@@ -6,7 +6,7 @@
 /*   By: bchafi <bchafi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 23:51:50 by bchafi            #+#    #+#             */
-/*   Updated: 2024/11/03 02:53:21 by bchafi           ###   ########.fr       */
+/*   Updated: 2024/11/06 14:29:59 by bchafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	unsigned char	*tmp;
+	char			*tmp;
 	size_t			i;
 	size_t			total_allocate;
 
