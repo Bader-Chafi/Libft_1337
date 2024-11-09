@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bchafi <bchafi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/02 23:51:50 by bchafi            #+#    #+#             */
-/*   Updated: 2024/11/06 14:29:59 by bchafi           ###   ########.fr       */
+/*   Created: 2024/11/07 23:21:00 by bchafi            #+#    #+#             */
+/*   Updated: 2024/11/09 15:06:00 by bchafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	char			*tmp;
-	size_t			i;
-	size_t			total_allocate;
+	char	*tmp;
+	size_t	i;
+	size_t	total_allocate;
 
 	i = 0;
 	if (count == 0 || size == 0)

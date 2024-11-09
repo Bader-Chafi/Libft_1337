@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bchafi <bchafi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/03 00:04:04 by bchafi            #+#    #+#             */
-/*   Updated: 2024/11/05 11:55:56 by bchafi           ###   ########.fr       */
+/*   Created: 2024/11/08 00:15:25 by bchafi            #+#    #+#             */
+/*   Updated: 2024/11/09 10:14:20 by bchafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 	dest = (char *)dst;
 	sourc = (const char *)src;
+	if (dst == src)
+		return (dst);
 	if (!dst && !src)
 		return (NULL);
 	if (dest > sourc)

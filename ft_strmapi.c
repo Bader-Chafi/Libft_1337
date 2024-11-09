@@ -6,7 +6,7 @@
 /*   By: bchafi <bchafi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 02:41:16 by bchafi            #+#    #+#             */
-/*   Updated: 2024/11/03 02:41:31 by bchafi           ###   ########.fr       */
+/*   Updated: 2024/11/09 14:50:01 by bchafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*string;
 
 	i = 0;
-	if (!s)
+	if (!s || !f)
 		return (NULL);
 	len = ft_strlen(s);
 	string = (char *)malloc(len + 1);

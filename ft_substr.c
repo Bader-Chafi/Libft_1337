@@ -6,7 +6,7 @@
 /*   By: bchafi <bchafi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 02:29:19 by bchafi            #+#    #+#             */
-/*   Updated: 2024/11/03 02:29:22 by bchafi           ###   ########.fr       */
+/*   Updated: 2024/11/08 18:09:12 by bchafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	size;
 	char	*sub;
 
+	if (!s)
+		return (NULL);
 	size = ft_strlen(s);
 	if (start >= size)
 		return (ft_strdup(""));

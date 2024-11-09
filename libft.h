@@ -6,7 +6,7 @@
 /*   By: bchafi <bchafi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 02:30:23 by bchafi            #+#    #+#             */
-/*   Updated: 2024/11/07 09:32:48 by bchafi           ###   ########.fr       */
+/*   Updated: 2024/11/09 10:20:56 by bchafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@
 # include <unistd.h>
 # include <string.h>
 # include <limits.h>
-// plus
-# include <stdio.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);

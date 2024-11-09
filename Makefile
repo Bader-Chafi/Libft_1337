@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: bchafi <bchafi@student.42.fr>              +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/11/08 16:15:01 by bchafi            #+#    #+#              #
+#    Updated: 2024/11/08 17:44:14 by bchafi           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = libft.a
 HEADER = libft.h
 
@@ -9,8 +21,8 @@ SOURCES = \
 	ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 
 SOURCESB = \
-	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
-	ft_lstclear.c ft_lstiter.c ft_lstmap.c
+	ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
+	ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
 
 OBJECTS = $(SOURCES:.c=.o)
 
@@ -28,8 +40,8 @@ all: $(NAME)
 $(NAME): $(OBJECTS)
 	$(AR) -rc $@ $^
 
-bonus: $(NAME) $(OBJECTSB)
-	$(AR) -rc $(NAME) $(OBJECTSB) $(OBJECTSB)
+bonus: $(OBJECTSB)
+	$(AR) -rc $(NAME) $^
 
 clean:
 	rm -f $(OBJECTS) $(OBJECTSB)

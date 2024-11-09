@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bchafi <bchafi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/02 23:09:54 by bchafi            #+#    #+#             */
-/*   Updated: 2024/11/07 09:38:48 by bchafi           ###   ########.fr       */
+/*   Created: 2024/11/08 00:11:44 by bchafi            #+#    #+#             */
+/*   Updated: 2024/11/08 10:05:15 by bchafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,4 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	return (number * sign);
-}
-int main (){
-	printf("%i", ft_atoi(SIZE_MAX));
 }

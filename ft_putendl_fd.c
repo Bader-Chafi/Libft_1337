@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bchafi <bchafi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/03 00:26:59 by bchafi            #+#    #+#             */
-/*   Updated: 2024/11/06 16:02:14 by bchafi           ###   ########.fr       */
+/*   Created: 2024/11/08 00:16:27 by bchafi            #+#    #+#             */
+/*   Updated: 2024/11/08 15:55:16 by bchafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	if (fd < 0)
+	if (fd < 0 || !s)
 		return ;
 	write(fd, s, ft_strlen(s));
 	write(fd, "\n", 1);
