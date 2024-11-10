@@ -6,7 +6,7 @@
 /*   By: bchafi <bchafi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 00:14:08 by bchafi            #+#    #+#             */
-/*   Updated: 2024/11/08 09:38:40 by bchafi           ###   ########.fr       */
+/*   Updated: 2024/11/09 22:32:51 by bchafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*ter;
 
-	if (!*lst)
+	if (!*lst || !del)
 		return ;
 	while (*lst)
 	{

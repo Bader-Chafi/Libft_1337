@@ -6,7 +6,7 @@
 /*   By: bchafi <bchafi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 00:16:58 by bchafi            #+#    #+#             */
-/*   Updated: 2024/11/09 10:20:24 by bchafi           ###   ########.fr       */
+/*   Updated: 2024/11/09 23:59:01 by bchafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static void	free_str(int len, char **s)
 	free(s);
 }
 
-char	**ft_split(char const *s, char c)
+char	**ft_other_split(char const *s, char c)
 {
 	int		i;
 	int		index_word;
@@ -67,4 +67,11 @@ char	**ft_split(char const *s, char c)
 	}
 	he[index_word] = NULL;
 	return (he);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	if (!s)
+		return (NULL);
+	return (ft_other_split(s, c));
 }
